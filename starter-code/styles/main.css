@@ -2,6 +2,14 @@
   box-sizing: border-box;
 }
 
+h1{
+  font-size: 70px;
+  font-family: 'Black Ops One', cursive;
+  color: black;
+  font-weight: 600;
+  
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,6 +17,9 @@ html, body {
 }
 
 body {
+  background-image: url(https://ak0.picdn.net/shutterstock/videos/4347200/thumb/1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,32 +30,56 @@ div.grid {
   height: 440px;
   display: flex;
   flex-wrap: wrap;
-  background-color: green;
+  
   
 }
 
 div.grid-item {
   width: 40px;
   height: 40px;
-  border: 1px dashed black;
-
+  border: 2px solid black;
+  opacity: 0.9;
 }
 
 
 div.grid-item.head {
-  /* background-image: url('../assets/pika-sprite.png'); */
+  background-image: url(/Users/adrian/development/projects/project-01/starter-code/assets/heiniken.png) ;
   width: 40px;
   height: 40px;
-  background-color: black;
+  
   background-repeat: no-repeat;
   background-size: contain;
+  opacity: 1;
+}
+
+.containter {
+  display: flex;
+  
+}
+
+div.score{
+  background-image: url(/Users/adrian/development/projects/project-01/starter-code/assets/cap.png);
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: large;
+}
+.start {
+  background-image: url(/Users/adrian/development/projects/project-01/starter-code/assets/cap.png);
+  width: 100px;
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-size: large  ;
 }
 
 div.grid-item.apple {
   width: 40px;
   height: 40px;
-  background-color: red;
+  background-image: url(/Users/adrian/development/projects/project-01/starter-code/assets/heiniken.png) ;
   background-repeat: no-repeat;
   background-size: contain;
-   
+  opacity: 1;
+  
 }
