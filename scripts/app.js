@@ -20,10 +20,8 @@ function init() {
 
   function playSound2() {
     sounds2.play()
-   
   }
 
-  
   function createGrid() {
     Array(width * width).join('.').split('.').forEach(() => {
       const square = document.createElement('div')
@@ -136,7 +134,6 @@ function init() {
   }
   eatApple()
   
- 
   function removeApple() {
     squares.forEach(square => square.classList.remove('apple'))
   }
