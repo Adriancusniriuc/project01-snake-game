@@ -1,21 +1,29 @@
 function init() {
   //dom variables
+  const sounds = document.querySelector('.sound')
+  const sounds2 = document.querySelector('.sound2')
   const grid = document.querySelector('.grid')
   const squares = []
   const width = 11
   let headIndex = [3,2,1]
   let move = null
-  // let clear = clearInterval
   const startBtn = document.querySelector('.start')
-  // const board = []
   const scoreDiv = document.querySelector('.score')
   let score = 1
   let direction = null
   let isGameOver = false
   let speed = 300
  
+  function playSound() {
+    sounds.play()
+  }
 
-  //Creating the grid
+  function playSound2() {
+    sounds2.play()
+   
+  }
+
+  
   function createGrid() {
     Array(width * width).join('.').split('.').forEach(() => {
       const square = document.createElement('div')
@@ -25,7 +33,6 @@ function init() {
     })
   }
   createGrid()
- 
 
   function handleKeyDown(e) {
     switch (e.keyCode) {
@@ -61,26 +68,11 @@ function init() {
     headIndex.map(index => squares[index].classList.add('head'))
     isColission()
   }
-  // addSnake()
 
   function removeSnake() {
    
     headIndex.map(index => squares[index].classList.remove('head'))
   }
-
-  // function handleDirection() {
-  //   snake.unshift(playerIndex)
-  //   snake = snake.slice(0, foodEaten)
-  //   switch (direction) {
-  //     case 'right':
-  //       if (playerIndex % width < width - 1) {
-  //         playerIndex++
-  //       } else {
-  //         playerIndex = playerIndex - width + 1
-  //       }
-  //       break
-  //     case 'left':
-    
 
   function movement() {
   
@@ -128,20 +120,6 @@ function init() {
   }
   movement()
 
-  // function notOnSnake() {
-  //   const apple = generateApple()
-  //   // for (let i = 0; i < squares.length; i++) {
-  //   if (squares[apple].classList.contains('head')) {
-  //     console.log('on snake')
-  //   }
-      
-  // }
-  
-  // notOnSnake()
-  
-
-  
- 
   function eatApple() {
     if (squares[headIndex[0]].classList.contains('apple') ) {
       headIndex.unshift(headIndex[0]) 
@@ -152,16 +130,12 @@ function init() {
       speed = speed - 10
       move = setInterval(movement, speed) 
       generateApple()
-     
+      playSound()
       console.log(move)
     } 
-    
-    
   }
   eatApple()
-  // if head index contains class apple 
-  // removeclass
-  // generateApple
+  
  
   function removeApple() {
     squares.forEach(square => square.classList.remove('apple'))
@@ -177,8 +151,6 @@ function init() {
     }
 
   }
-  // generateApple()
-  
   
   function isColission() {
     for (let i = 1; i < squares.length; i++) {
@@ -195,12 +167,11 @@ function init() {
     
   }
   
-  console.log(squares)
-  
   function killGame() {
+    playSound2()
     isGameOver = false
     clearInterval(move)
-    alert('GAME OVER!')
+    // alert('DO NOT DRINK AND DRIVE!')
     removeApple()
     clearGrid()
     score = 0
@@ -210,7 +181,6 @@ function init() {
     direction = 'right'
   }
   
-
   function startButton() {
     if (!isGameOver) {
       addSnake()
@@ -230,7 +200,7 @@ function init() {
 window.addEventListener('DOMContentLoaded', init)
 
 
-// clearInterval(move)
+
 
 
 
