@@ -1,5 +1,7 @@
 function init() {
   //dom variables
+  // let storedHiScore = localStorage.getItem('storedHiScore') ? JSON.parse(localStorage.getItem('storedHiScore')) : null
+  // const data = JSON.parse(localStorage.getItem('storedHiScore'))
   const sounds = document.querySelector('.sound')
   const sounds2 = document.querySelector('.sound2')
   const grid = document.querySelector('.grid')
@@ -14,6 +16,15 @@ function init() {
   let isGameOver = false
   let speed = 300
  
+  // function hiScoreCreate() {
+  //   const hiScore = document.createElement('div')
+  //   hiScore.classList.add('hi-score')
+  //   hiScore.innerHTML = storedHiScore
+  //   eachScore.appendChild(hiScore)
+  // }
+
+
+
   function playSound() {
     sounds.play()
   }
