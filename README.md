@@ -51,7 +51,7 @@ My solution was using the grid's cell indexes as a range and determining that an
 Apart from this, I have noticed some bugs that I could work on. For example, everytime a beer is being drunk a hiccup sound is played. One of the bugs appears when you drink two beers quickly one after another. If this happens, the second hiccup sound is not played. <br>
 Another thing I would like to improve would be creating a leaderboard. 
 
-**<h2>Wins</h2>**
+**<h2>Wins & Key Learnings</h2>**
 I believe this project represents one of the steepest learning curves throughout my twelve weeks at General Assembly’s Software Engineering Immersive.
 
 The key features of my learning curve are represented by the understanding of following practices: 
