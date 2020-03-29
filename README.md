@@ -55,7 +55,7 @@ Another thing I would like to improve would be creating a leaderboard.
 I believe this project represents one of the steepest learning curves throughout my twelve weeks at General Assembly’s Software Engineering Immersive.
 
 The key features of my learning curve are represented by the understanding of following practices: 
-- Learning how to map through items in an array. (grid)
-- Learning how to use a for loop. (collision)
+- Learning how to map through items in an array. (Grid creation)
+- Learning how to use a for loop. (Snake collision)
 - If statement. (Bottles as food)
 - Ternary Statement. (Game End)
